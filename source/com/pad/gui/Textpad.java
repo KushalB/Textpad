@@ -83,18 +83,18 @@ class Textpad{
 		Toolkit tk = Toolkit.getDefaultToolkit();
 		Dimension d = tk.getScreenSize();
 		try{
-			File f = new File("C:/Temp/Sizeoftextpad.txt");
+			/*File f = new File("C:/Temp/Sizeoftextpad.txt");
 			FileReader fr = new FileReader(f);
-			BufferedReader br = new BufferedReader(fr);
-			frame.setSize(Integer.parseInt(br.readLine()),Integer.parseInt(br.readLine()));
-			FileReader loc = new FileReader(f);
+			BufferedReader br = new BufferedReader(fr);*/
+			frame.setSize(500,500);
+			/*FileReader loc = new FileReader(f);
 			BufferedReader loca = new BufferedReader(loc);
 			frame.setLocation((d.width-Integer.parseInt(loca.readLine()))/2,(d.height-Integer.parseInt(loca.readLine()))/2);
 			f = new File("C:/Temp/fonts.txt");
 			fr = new FileReader(f);
 			br = new BufferedReader(fr);
 			fontSize = Integer.parseInt(br.readLine());
-			//bolder = Integer.parseInt(br.readLine());
+			//bolder = Integer.parseInt(br.readLine());*/
 		}catch(Exception E){
 			E.printStackTrace();
 		}
@@ -106,8 +106,8 @@ class Textpad{
 			Thread T = new Thread(new Check());
 			T.setName("Check Thread");
 			T.start();
-			Thread T5 = new Thread(new Size());
-			T5.start();
+			//Thread T5 = new Thread(new Size());
+			//T5.start();
 		}catch(Exception E){
 			E.printStackTrace();
 		}
